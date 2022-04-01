@@ -21,7 +21,7 @@ export function PokemonList() {
     fetchPokemon()
   }, [])
 
-  let filteredPokemon = pokemonList.map((pokemon: PokemonList, index) => {
+  let filteredPokemonList = pokemonList.map((pokemon: PokemonList, index) => {
     return {
       ...pokemon,
       id: index + 1,
@@ -30,7 +30,7 @@ export function PokemonList() {
 
   return (
     <section className="pokemon-list">
-      {filteredPokemon.map((pokemon) => {
+      {filteredPokemonList.map((pokemon) => {
         return (
           <div key={pokemon.id} className="pokemon-card">
             <p>{pokemon.name}</p>
